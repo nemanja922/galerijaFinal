@@ -25,7 +25,6 @@ $password = trim($_POST['password']);
 
 $user_found = User::verify_user($username, $password);
 
-
 	if ($user_found) {
 	    $_SESSION['signed_in'] = true;
 
@@ -37,6 +36,7 @@ $user_found = User::verify_user($username, $password);
 	$the_message = "Your password or username are incorrect"; 
 	echo $the_message;
         header('HTTP/1.1 401 Unauthorized', true, 401);
+
 
 	}
 
